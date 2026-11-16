@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início | Mine News</title>
+  <meta name="description" content="Mine News: notícias, atualizações e novidades da comunidade de Minecraft.">
+
+  <!-- Bootstrap e fonte dos títulos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Estilos do site -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== MENU ===== -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Mine News</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="atualizacoes.html">Atualizações</a></li>
+          <li class="nav-item"><a class="nav-link" href="comunidade.html">Comunidade</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="hero">
+      <div class="container">
+        <h1 class="mb-4">Tudo o que acontece no mundo de Minecraft</h1>
+        <p class="mb-0">Notícias e lançamentos de 2026: de Tiny Takeover a Wilderness Bound, veja o que mudou no jogo.</p>
+      </div>
+    </header>
+
+    <!-- ===== DESTAQUES (carousel do Bootstrap) ===== -->
+    <section>
+      <div class="container">
+        <h2>Destaques</h2>
+
+        <div id="destaques" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#destaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Destaque 1"></button>
+            <button type="button" data-bs-target="#destaques" data-bs-slide-to="1" aria-label="Destaque 2"></button>
+            <button type="button" data-bs-target="#destaques" data-bs-slide-to="2" aria-label="Destaque 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="slide s1">
+                <div>
+                  <h3>Wilderness Bound chegou em setembro</h3>
+                  <p>Lançada em 15 de setembro de 2026, a atualização trouxe um novo bioma de floresta, acampamentos abandonados e itens decorativos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide s3">
+                <div>
+                  <h3>Minecraft Dungeons II já está disponível</h3>
+                  <p>A sequência do jogo de ação e aventura foi lançada em 29 de setembro de 2026.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide s2">
+                <div>
+                  <h3>Chaos Cubed trouxe o Sulfur Cube</h3>
+                  <p>Lançada em 16 de junho de 2026, a atualização adicionou as cavernas de enxofre e um mob que absorve blocos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#destaques" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#destaques" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÚLTIMAS NOTÍCIAS (cards do Bootstrap) ===== -->
+    <section class="pt-0">
+      <div class="container">
+        <h2>Últimas notícias</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="tag">Março de 2026</span>
+                <h3>Tiny Takeover</h3>
+                <p>Todos os mobs bebês ganharam visuais novos. Foram 39 redesenhos, para deixar os filhotes de Minecraft ainda mais fofos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="tag">2027</span>
+                <h3>Primeira atualização de 2027</h3>
+                <p>Na TwitchCon, em 14 de novembro, a Mojang mostrou uma novidade para o ano que vem: um disco arremessável que volta para a mão e a mão secundária completa no Bedrock.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="tag">Junho de 2026</span>
+                <h3>O Sulfur Cube</h3>
+                <p>A atualização Chaos Cubed apresentou um mob capaz de absorver blocos e mudar suas propriedades, além das cavernas de enxofre.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="pt-0">
+      <div class="container">
+        <div class="panel p-4">
+          <h2>Sobre o Mine News</h2>
+          <p>Este site reúne, em português, resumos das principais novidades de Minecraft. Cada texto é curto e fácil de ler, mesmo para quem está começando.</p>
+          <p class="mb-0">Use o menu para ver as atualizações mais recentes e descobrir como a comunidade ajuda a manter o jogo vivo. As informações podem mudar, então confirme as datas em minecraft.net.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <div class="container">
+      <p class="mb-1">Mine News é um projeto acadêmico feito por fãs. Não é afiliado à Mojang Studios nem à Microsoft. Minecraft é marca registrada da Mojang AB.</p>
+      <p class="mb-0">Fonte oficial: <a href="https://www.minecraft.net/pt-br" target="_blank" rel="noopener">minecraft.net</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript do Bootstrap (menu, carousel e accordion) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

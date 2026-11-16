@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Mine News | style.css
+   Sumário:
+   1. Variáveis (cores)
+   2. Base e tipografia
+   3. Navbar
+   4. Hero (cabeçalho das páginas)
+   5. Botão
+   6. Cards, painéis e accordion
+   7. Carousel
+   8. Seções e rodapé
+   9. Acessibilidade (foco e animações)
+   10. Responsividade
+   ========================================================================== */
+
+
+/* 1. VARIÁVEIS
+   -------------------------------------------------------------------------- */
+:root {
+  --dirt: #4a2f1a;      /* marrom (terra) */
+  --grass: #5d9c3a;     /* verde (grama) */
+  --grass-d: #3f7a25;   /* verde escuro */
+  --sky: #dcecf3;       /* azul claro (céu) */
+  --stone: #8a8a8a;     /* cinza (pedra) */
+  --ink: #1f2a1a;       /* cor do texto e das bordas */
+  --paper: #fbfaf6;     /* fundo de cards e painéis */
+}
+
+
+/* 2. BASE E TIPOGRAFIA
+   -------------------------------------------------------------------------- */
+body {
+  background: var(--sky);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: "Press Start 2P", ui-monospace, monospace;
+  line-height: 1.5;
+}
+
+h1 { font-size: clamp(1.2rem, 4vw, 2rem); }
+
+h2 {
+  font-size: clamp(1rem, 2.6vw, 1.3rem);
+  margin-bottom: 1.25rem;
+}
+
+h3 { font-size: .95rem; }
+
+p { max-width: 70ch; }
+
+
+/* 3. NAVBAR
+   -------------------------------------------------------------------------- */
+.navbar {
+  background: var(--dirt);
+  border-bottom: 8px solid var(--grass);
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-size: .9rem;
+}
+
+.nav-link {
+  color: #e8dccb !important;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff !important;
+  text-decoration: underline;
+  text-decoration-color: var(--grass);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+/* Botão "hambúrguer" (celular) */
+.navbar-toggler { border-color: #e8dccb; }
+.navbar-toggler-icon { filter: invert(1); }
+
+
+/* 4. HERO (cabeçalho das páginas)
+   -------------------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(var(--grass) 0 14px, var(--dirt) 14px);
+  color: #fff;
+  padding: 4.5rem 0 3.5rem;
+}
+
+.hero p {
+  color: #eadfce;
+  font-size: 1.1rem;
+}
+
+
+/* 5. BOTÃO
+   -------------------------------------------------------------------------- */
+.btn-mc {
+  background: var(--grass);
+  color: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--ink);
+  font-weight: 700;
+  padding: .6rem 1.2rem;
+}
+
+.btn-mc:hover {
+  background: var(--grass-d);
+  color: #fff;
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: translate(2px, 2px);
+}
+
+
+/* 6. CARDS, PAINÉIS E ACCORDION
+   -------------------------------------------------------------------------- */
+/* Estilo "bloco": borda grossa e sombra sem desfoque */
+.panel,
+.card,
+.accordion-item {
+  background: var(--paper);
+  border: 3px solid var(--ink) !important;
+  border-radius: 0 !important;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.card-body { padding: 1.5rem; }
+
+/* Etiqueta colorida dos cards */
+.tag {
+  display: inline-block;
+  background: var(--grass);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-bottom: .6rem;
+  padding: .1rem .6rem;
+}
+
+/* Accordion */
+.accordion-button {
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--grass);
+  color: #fff;
+  box-shadow: none;
+}
+
+
+/* 7. CAROUSEL
+   -------------------------------------------------------------------------- */
+.carousel {
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.slide {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  min-height: 260px;
+  padding: 2rem 4rem;
+}
+
+.slide h3 {
+  font-size: 1rem;
+  margin-bottom: .8rem;
+}
+
+.slide p { margin: 0; }
+
+/* Cores de fundo dos slides */
+.s1 { background: linear-gradient(135deg, #3f7a25, #1f4a14); } /* verde */
+.s2 { background: linear-gradient(135deg, #8a8a8a, #3d3d46); } /* cinza */
+.s3 { background: linear-gradient(135deg, #b4572a, #4a2f1a); } /* laranja */
+
+
+/* 8. SEÇÕES E RODAPÉ
+   -------------------------------------------------------------------------- */
+section { padding: 3rem 0; }
+
+footer {
+  background: var(--dirt);
+  border-top: 8px solid var(--grass);
+  color: #e8dccb;
+  font-size: .9rem;
+  padding: 2rem 0;
+}
+
+footer a { color: #fff; }
+
+
+/* 9. ACESSIBILIDADE
+   -------------------------------------------------------------------------- */
+/* Contorno visível ao navegar pelo teclado */
+.accordion-button:focus,
+.btn:focus-visible,
+a:focus-visible {
+  box-shadow: none;
+  outline: 3px solid #f2b705;
+  outline-offset: 2px;
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+
+/* 10. RESPONSIVIDADE
+   -------------------------------------------------------------------------- */
+/* Celulares (até 576px) */
+@media (max-width: 576px) {
+  .hero { padding: 3rem 0 2.5rem; }
+  .slide { padding: 2rem 3rem; }
+}
